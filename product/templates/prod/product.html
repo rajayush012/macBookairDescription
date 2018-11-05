@@ -20,6 +20,11 @@ background: url("https://images.unsplash.com/photo-1495422964407-28c01bf82b0d?ix
 -o-background-size: cover;
 background-size: cover;
 }
+.dabo {
+  background-image: url("https://images.unsplash.com/photo-1518600654093-2a24cddafa38?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=96238af4ac6e58d17d362d5b8b846eb4&auto=format&fit=crop&w=1117&q=80");
+  background-size: cover;
+  height: 400px;
+}
 
     </style>
     <!-- Custom styles for this template -->
@@ -36,7 +41,7 @@ background-size: cover;
       <img class="image-fluid" height=35  src="https://www.apple.com/ac/globalnav/4/en_IN/images/globalnav/apple/image_large.svg" />
         </a>
         <a class="py-2 d-none d-md-inline-block" href="{% url 'homepage' %}">Tour</a>
-        <a class="py-2 d-none d-md-inline-block" href="#">Specs</a>
+        <a class="py-2 d-none d-md-inline-block" href="{% url 'specs' %}">Specs</a>
         <a class="py-2 d-none d-md-inline-block" href="#">Updates</a>
 
     </nav>
@@ -54,11 +59,11 @@ background-size: cover;
 
     </div>
 
-
+<div class="container dola">
   {% for prod in product.all %}
 
 
-  <div class="container">
+
   <div class="card text-dark bg-light text-center mb-3">
     <div class="card-body">
       <h5 class="card-title display-3">{{ prod.spec_sum }}</h5>
@@ -66,16 +71,17 @@ background-size: cover;
     </div>
     <img class="image-fluid card-img-bottom" src="{{ prod.image.url }}" alt="Card image cap">
   </div>
-</div>
+
 
 {% endfor %}
+</div>
 
 
-
-<footer class="jumbotron jumbotron-fluid">
+<footer class="jumbotron dabo jumbotron-fluid">
 <div class="container">
-  <h1 class="display-5">&copy; Ayush Raj {% now "Y" %}</h1>
+
   <p class="lead">The most loved Mac is about to make you fall in love all over again. Available in silver, space grey and gold, the new thinner and lighter MacBook Air features a brilliant Retina display, Touch ID, the latest-generation keyboard and a Force Touch trackpad. The iconic wedge is created from 100 per cent recycled aluminium, making it the greenest Mac ever.1 And with all-day battery life, MacBook Air is your perfectly portable, do-it-all notebook.</p>
+  <h3 class="text-center">&copy; Ayush Raj {% now "Y" %}</h1>
 </div>
 </footer>
 
