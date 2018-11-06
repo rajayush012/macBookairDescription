@@ -46,36 +46,7 @@ background-size: cover;
 
     </nav>
 
-    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
-      <img class="image-fluid" src="https://www.apple.com/v/macbook-air/c/images/overview/hero_air__c3y57bni07wy_large.png">
-
-      <div class="col-md-5 p-lg-5 mx-auto my-5">
-
-        <h1 class="display-4 font-weight-normal">Lightness strikes. Again.</h1>
-        <p class="lead font-weight-normal">The all new MacBook Air is finally here.</p>
-        <a class="btn btn-outline-secondary" href="mailto:raj.ayush012@gmail.com">Subscribe to get one!</a>
-      </div>
-      <div class="shadow-sm d-none d-md-block"><img class="image-fluid" src="https://www.apple.com/v/macbook-air/c/images/overview/materials__cvfafmvjzpw2_large.png" /></div>
-
-    </div>
-
-<div class="container dola">
-  {% for prod in product.all %}
-
-
-
-  <div class="card text-dark bg-light text-center mb-3">
-    <div class="card-body">
-      <h5 class="card-title display-3">{{ prod.spec_sum }}</h5>
-      <p class="card-text">{{ prod.detail }}</p>
-    </div>
-    <img class="image-fluid card-img-bottom" src="{{ prod.image.url }}" alt="Card image cap">
-  </div>
-
-
-{% endfor %}
-</div>
-
+  
 
 <footer class="jumbotron dabo jumbotron-fluid">
 <div class="container">
